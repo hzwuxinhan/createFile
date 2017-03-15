@@ -1,8 +1,8 @@
 {
     "name": "goTo",
     "displayName": "goTo",
-    "description": "",
-    "version": "0.0.2",
+    "description": "a userful tool to help you find and create js,css",
+    "version": "0.1.0",
     "publisher": "hzwuxinhan",
     "engines": {
         "vscode": "^1.10.0"
