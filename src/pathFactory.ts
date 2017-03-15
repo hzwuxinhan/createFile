@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export function getFile (text,rootpath) {
-    var reg = /[\'\"](\.{0,2}|\/).*[\"\']/;
+    var reg = /[\'\"](\.|\/).*[\"\']/;
     if(text.match(reg)){
         text = text.match(reg)[0].replace(/[\"\']/g,"")
     }else {
