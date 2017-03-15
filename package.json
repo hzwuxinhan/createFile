@@ -16,13 +16,13 @@
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-            "command": "extension.sayHello",
-            "title": "to"
+            "command": "extension.goTo",
+            "title": "goTo"
         }],
         "menus": {
            "editor/context": [
                {
-                   "command": "extension.sayHello",
+                   "command": "extension.goTo",
                     "group": "myGroup@1"
                }
            ] 
