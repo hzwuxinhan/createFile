@@ -2,7 +2,7 @@
     "name": "goTo",
     "displayName": "goTo",
     "description": "a userful tool to help you find and create js,css",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "publisher": "hzwuxinhan",
     "engines": {
         "vscode": "^1.10.0"
@@ -40,5 +40,6 @@
         "mocha": "^2.3.3",
         "@types/node": "^6.0.40",
         "@types/mocha": "^2.2.32"
-    }
+    },
+    "icon":"http://yanxuan.nosdn.127.net/d3f5b027fb4743458ee8165bc9ae9e4d.gif"
 }
