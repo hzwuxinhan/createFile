@@ -38,7 +38,7 @@ export function createFile (filePath) {
 }
 
 
-function ensureDir(dir) {
+export function ensureDir(dir) {
     if(fs.existsSync(dir)){
         return
     }
