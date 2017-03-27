@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import {getFile,createFile} from '../pathFactory';
+import {getFile,createFile,getFileType} from '../pathFactory';
 
 export function activate(context: vscode.ExtensionContext) {
     let goTo = vscode.commands.registerCommand('extension.goTo', () => {
@@ -9,7 +9,8 @@ export function activate(context: vscode.ExtensionContext) {
         const selectLineNum = selection.start.line;
         const lineText = editor.document.lineAt(selectLineNum).text;
         const rootPath = editor.document.uri.fsPath;
-        const filePath = getFile(lineText,rootPath);
+        const fileType = getFileType(editor.document.languageId);
+        const filePath = getFile(lineText,rootPath,fileType);
         if(!filePath) return;
         if(filePath.exist) {
             vscode.workspace.openTextDocument(filePath.file).then(doc => vscode.window.showTextDocument(doc))

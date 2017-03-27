@@ -5,7 +5,7 @@
   "version": "0.1.2",
   "publisher": "hzwuxinhan",
   "engines": {
-    "vscode": "^1.10.0"
+    "vscode": "^1.10.1"
   },
   "categories": [
     "Other"
@@ -62,7 +62,7 @@
     "@types/node": "^6.0.40",
     "@types/mocha": "^2.2.32"
   },
-  "icon": "icon.gif",
+  "icon": "icon.jpg",
   "dependencies": {
     "node-clipboard": "^1.2.0"
   }
