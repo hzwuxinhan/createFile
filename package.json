@@ -1,8 +1,8 @@
 {
-  "name": "wiki",
-  "displayName": "wiki",
-  "description": "parse wiki from web and create mock file",
-  "version": "0.0.1",
+  "name": "goTo",
+  "displayName": "goTo",
+  "description": "a userful tool to help you find and create js,css",
+  "version": "0.1.3",
   "publisher": "hzwuxinhan",
   "engines": {
     "vscode": "^1.10.0"
@@ -11,25 +11,42 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:wiki.parse"
+    "*"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "wiki.parse",
-        "title": "wiki: parse"
+        "command": "extension.goTo",
+        "title": "goTo"
+      },
+      {
+        "command": "extension.copyPath",
+        "title": "goTo: Copy the relative path"
       }
     ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.goTo",
+          "group": "myGroup@1"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "extension.copyPath"
+        }
+      ]
+    },
     "configuration": {
       "properties": {
-        "wiki.config": {
-          "type": "object",
-          "default": {},
-          "description": "config file for wiki"
+        "goTo.rootPath": {
+          "type": "string",
+          "default": "",
+          "description": "webapp root path for Settings goTo."
         }
       },
-      "title": "wiki Configuration Settings"
+      "title": "goTo Configuration Settings"
     }
   },
   "scripts": {
@@ -47,6 +64,6 @@
   },
   "icon": "icon.jpg",
   "dependencies": {
-    "parsewiki": "^1.1.4"
+    "node-clipboard": "^1.2.0"
   }
 }
